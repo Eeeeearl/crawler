@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表情查找</title>
+</head>
+<body>
+    <form action="/search" method="get">
+        关键字：<input type="text" name="kw"><br>
+        搜索最大数量：<input type="text" name="count" value="100"><br>
+        <input type="submit" value="查找">
+    </form>
+    {% for i in iamges %}
+    <img src="{{ i.imageUrl }}" alt="{{ i.name }}">
+    {% endfor %}
+</body>
+</html>
